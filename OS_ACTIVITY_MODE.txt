@@ -1,0 +1,6 @@
+시스템 로그 출력으로 너무 많은 로그를 출력하고 싶지 않을때
+환경 변수에 OS_ACTIVITY_MODE 플래그 추가
+
+Product에서 Scheme > edit scheme > 오른쪽 Run
+Environment Variables에 OS_ACTIVITY_MODE 추가하고
+value값으로 disable 지정
