@@ -1,0 +1,24 @@
+- App Transport Security policy Keys (Information Property List)
+NSAppTransportSecurity : Dictionary {
+    NSAllowsArbitraryLoads : Boolean  (모든 네트워크 제한 해제 : true)
+    NSAllowsArbitraryLoadsForMedia : Boolean 
+    NSAllowsArbitraryLoadsInWebContent : Boolean
+    NSAllowsLocalNetworking : Boolean
+    NSAllowsArbitraryLoadsInWebContent : Boolean (YES 이면 WKWebView 내에서 호출한 ATS 제한 비활성)
+    NSExceptionDomains : Dictionary { (지정한 도메인 네트워트 제한 해제 설정)
+        <domain-name-string> : Dictionary {
+            NSIncludesSubdomains : Boolean 
+            NSExceptionAllowsInsecureHTTPLoads : Boolean (HTTP 연결 허용 : true)
+            NSExceptionMinimumTLSVersion : String (TLS Version
+            NSExceptionRequiresForwardSecrecy : Boolean (
+                기본 YES, NO 설정 시, chipers 키는 선택 사항
+
+                키는 선택 사항입니다. 기본값 YES : ECDHE(Elliptic Curve Diffie-Hellman Ephemeral) 키 교환을 통해 PFS를 지원하는 암호로 제한
+                https://developer.apple.com/documentation/security/preventing_insecure_network_connections#3138464
+              
+                Article : Performing manual server trust authentication
+                https://developer.apple.com/documentation/foundation/url_loading_system/handling_an_authentication_challenge/performing_manual_server_trust_authentication
+            )
+        }
+    }
+}
